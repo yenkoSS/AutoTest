@@ -39,13 +39,13 @@ document.querySelectorAll(".nav-footer-link").forEach((el) => {
   });
 });
 
-const navHeaderListSm = document.querySelector(".nav-header-list-sm");
+const navHeaderListSmAll = document.querySelectorAll(".nav-header-list-sm");
 document.querySelector(".icon-menu").addEventListener("click", () => {
-  navHeaderListSm.style.display = "flex";
+  navHeaderListSmAll.forEach((navList) => (navList.style.display = "flex"));
 });
 
 document.querySelector(".icon-close-menu").addEventListener("click", () => {
-  navHeaderListSm.style.display = "none";
+  navHeaderListSmAll.forEach((navList) => (navList.style.display = "none"));
 });
 
 document.querySelectorAll(".nav-header-anchor-sm").forEach((el) => {
