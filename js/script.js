@@ -63,6 +63,10 @@ document.querySelectorAll(".nav-header-anchor-sm").forEach((el) => {
   });
 });
 
+document.querySelector(".btn-hero-green").addEventListener("click", () => {
+  document.querySelector(".section-contact").scrollIntoView({ behavior: "smooth" });
+});
+
 document.querySelectorAll(".card-faq").forEach((card) => {
   card.addEventListener("click", (e) => {
     const currentElement = e.currentTarget;
