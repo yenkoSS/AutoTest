@@ -39,18 +39,27 @@ document.querySelectorAll(".nav-footer-link").forEach((el) => {
   });
 });
 
-const navHeaderListSmAll = document.querySelectorAll(".nav-header-list-sm");
-document.querySelector(".icon-menu").addEventListener("click", () => {
-  navHeaderListSmAll.forEach((navList) => (navList.style.display = "flex"));
+const iconMenuList = document.querySelectorAll(".icon-menu").forEach((icon) => {
+  icon.addEventListener("click", () => {
+    document.querySelector(".nav-header-list-sm").style.display = "flex";
+  });
 });
 
 document.querySelector(".icon-close-menu").addEventListener("click", () => {
-  navHeaderListSmAll.forEach((navList) => (navList.style.display = "none"));
+  document.querySelector(".nav-header-list-sm").style.display = "none";
 });
 
 document.querySelectorAll(".nav-header-anchor-sm").forEach((el) => {
   el.addEventListener("click", () => {
-    navHeaderListSm.style.display = "none";
+    document.querySelector(".nav-header-list-sm").style.display = "none";
+  });
+});
+
+document.querySelectorAll(".nav-header-anchor-sm").forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    const id = el.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   });
 });
 

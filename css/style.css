@@ -307,15 +307,33 @@ header {
   background-position: center;
 }
 
+.icon-quick-contact-whatsapp {
+  position: fixed;
+  height: auto;
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.171));
+  z-index: 5;
+  bottom: 6rem;
+  right: 3rem;
+  width: 6rem;
+  height: auto;
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.171));
+}
+
 .quick-contact-bar {
   background-color: var(--color-green-default);
-  padding: 2rem 6rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
   animation-name: loadQuickContactBar;
   animation-duration: 800ms;
+}
+
+.half-quick-bar {
+  padding: 1rem 6rem 1rem 1rem;
+  width: 100%;
+  background-color: var(--color-dark-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .icon-quick-contact-bar {
@@ -408,6 +426,20 @@ nav {
   justify-content: center;
   gap: 5rem;
   z-index: 3;
+  animation-name: loadSmallNav;
+  animation-duration: 300ms;
+}
+
+@keyframes loadSmallNav {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .nav-header-anchor-sm {
@@ -766,7 +798,8 @@ blockquote {
   }
 
   .text-quick-contact-bar {
-    font-size: 18px;
+    font-size: 14px;
+    color: white;
   }
 }
 
@@ -793,5 +826,22 @@ blockquote {
 
   .header-c {
     height: 84%;
+  }
+
+  .half-quick-bar {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .half-quick-bar {
+    width: 70%;
+    clip-path: polygon(0 0, 100% 0%, 97% 100%, 0% 100%);
+  }
+
+  .icon-quick-contact-whatsapp {
+    right: 4rem;
   }
 }
