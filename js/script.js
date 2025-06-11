@@ -15,6 +15,11 @@ document.querySelectorAll(".nav-header-logo").forEach((el) => {
   });
 });
 
+document.querySelector(".btn-hero-green").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+});
+
 document.querySelectorAll(".nav-footer-logo").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
