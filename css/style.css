@@ -728,6 +728,13 @@ footer {
   transition: 300ms;
 }
 
+.nav-footer-link-legal {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 300ms;
+}
+
 .nav-footer-link:hover {
   transform: translateY(-3px);
 }
